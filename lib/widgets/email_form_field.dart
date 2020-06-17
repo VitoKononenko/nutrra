@@ -21,6 +21,7 @@ class EmailFormField extends StatelessWidget {
     return EnhancedTextFormField(
       decoration: InputDecoration(labelText: localizations.email),
       onSaved: onSaved,
+      keyboardType: TextInputType.emailAddress,
       validator: (String email) {
         if (email == null || email.isEmpty) {
           return localizations.getRequiredField(localizations.email);
